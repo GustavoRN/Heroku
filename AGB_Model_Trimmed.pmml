@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="4.1">
+    <Header copyright="Copyright 2014 Fair Isaac Corporation.  All rights reserved.">
+        <Application name="ModelBuilder" version="7.5.1" />
+        <Extension>
+            <ScaleInfo>
+                <name></name>
+                <summary>
+                    <objective type="string">Odds At Scaled Score</objective>
+                    <intercept type="numeric">1.265785217</intercept>
+                    <slope type="numeric">1.046296954</slope>
+                    <pdo type="numeric">20.0</pdo>
+                    <odds type="numeric">1.0</odds>
+                    <scaledValue type="numeric">200.0</scaledValue>
+                    <precision type="numeric">0.0</precision>
+                    <scaleFactor type="numeric">30.189748536660556</scaleFactor>
+                    <allocate type="string">commonMin</allocate>
+                    <tap type="numeric">178.0</tap>
+                    <unAllocatedPoints type="numeric">0.0</unAllocatedPoints>
+                </summary>
+                <weights>
+                    <weight var="gOcupacion" binSpec="'Mantenimiento' 'Policias'" binLabel="Mantenimiento, Policias" unscaled="-0.2571967035066426" scaled="20.0" />
+                    <weight var="gOcupacion" binSpec="'Administrativos' 'Burocratas'" binLabel="Administrativos, Burocratas" unscaled="-0.11493770368693661" scaled="24.0" />
+                    <weight var="gOcupacion" binSpec="'Docentes'" binLabel="Docentes" unscaled="-0.025571846198201652" scaled="27.0" />
+                    <weight var="gOcupacion" binSpec="'Empleado' 'Empleado Sector Salud' 'Empleados' 'Enfermera' 'Medicos'" binLabel="Empleado, Empleado Sector Salud, Empleados, Enfermera, Medicos" unscaled="0.22754331312837237" scaled="35.0" />
+                    <weight var="gOcupacion" binSpec="'Pensionado'" binLabel="Pensionado" unscaled="0.20634088487485203" scaled="34.0" />
+                    <weight var="gOcupacion" binSpec="'Otro'" binLabel="Otro" unscaled="0.0" scaled="28.0" />
+                    <weight var="gOcupacion" binSpec="*e" binLabel="ELSE" unscaled="0.0" scaled="28.0" />
+                    <weight var="gEdad" binSpec="(-, 0), [0, 18), [18, 25)" binLabel="(-, 25)" unscaled="-0.40389973740681445" scaled="20.0" />
+                    <weight var="gEdad" binSpec="[25, 26), [26, 28), [28, 29), [29, 30)" binLabel="[25, 30)" unscaled="-0.15307052378586056" scaled="28.0" />
+                    <weight var="gEdad" binSpec="[30, 31), [31, 32), [32, 33), [33, 34), [34, 35)" binLabel="[30, 35)" unscaled="-0.10041938574835008" scaled="29.0" />
+                    <weight var="gEdad" binSpec="[35, 36), [36, 37), [37, 38), [38, 39), [39, 40)" binLabel="[35, 40)" unscaled="-0.017232810045935486" scaled="32.0" />
+                    <weight var="gEdad" binSpec="[40, 41), [41, 42), [42, 43), [43, 44), [44, 45)" binLabel="[40, 45)" unscaled="-0.017217487973781583" scaled="32.0" />
+                    <weight var="gEdad" binSpec="[45, 46), [46, 47), [47, 48), [48, 49), [49, 50)" binLabel="[45, 50)" unscaled="-0.01721715992589596" scaled="32.0" />
+                    <weight var="gEdad" binSpec="[50, 51), [51, 52), [52, 53), [53, 54), [54, 55)" binLabel="[50, 55)" unscaled="-0.01721703478889309" scaled="32.0" />
+                    <weight var="gEdad" binSpec="[55, 57), [57, 59), [59, 60), [60, 62), [62, 64), [64, 65)" binLabel="[55, 65)" unscaled="0.13787861937525822" scaled="36.0" />
+                    <weight var="gEdad" binSpec="[65, 66), [66, 69), [69, 70), [70, 74), [74, 75), [75, 80), [80, 100), [100, 200), [200, +)" binLabel="[65, +)" unscaled="0.48809928120221874" scaled="47.0" />
+                    <weight var="gEdad" binSpec="*e" binLabel="ELSE" unscaled="0.0" scaled="32.0" />
+                    <weight var="avgMosInFile" binSpec="MV" binLabel="No Investigation (MV)" unscaled="0.0" scaled="26.0" />
+                    <weight var="avgMosInFile" binSpec="*e" binLabel="No record/no hit (MV18)" unscaled="-0.005152693616171806" scaled="26.0" />
+                    <weight var="avgMosInFile" binSpec="MV01" binLabel="No trade lines with months in file (MV01)" unscaled="0.0" scaled="26.0" />
+                    <weight var="avgMosInFile" binSpec="(-, 0), [0, 3), [3, 6), [6, 9), [9, 12), [12, 18), [18, 24)" binLabel="(-, 24)" unscaled="-0.20385144051698806" scaled="20.0" />
+                    <weight var="avgMosInFile" binSpec="[24, 30), [30, 36)" binLabel="[24, 36)" unscaled="-0.05498338741385892" scaled="24.0" />
+                    <weight var="avgMosInFile" binSpec="[36, 42), [42, 48)" binLabel="[36, 48)" unscaled="-0.0070606307770703204" scaled="26.0" />
+                    <weight var="avgMosInFile" binSpec="[48, 54), [54, 60)" binLabel="[48, 60)" unscaled="0.08716143534336793" scaled="29.0" />
+                    <weight var="avgMosInFile" binSpec="[60, 66), [66, 72), [72, 78), [78, 84)" binLabel="[60, 84)" unscaled="0.11910174281951456" scaled="30.0" />
+                    <weight var="avgMosInFile" binSpec="[84, 90), [90, 96), [96, 108), [108, 120), [120, 132), [132, 144), [144, 156), [156, 168), [168, 180), [180, 192), [192, 204), [204, 216), [216, 228), [228, 240), [240, 252), [252, 264), [264, 276), [276, 288), [288, 300), [300, 312), [312, 324), [324, 336), [336, 348), [348, 360), [360, +)" binLabel="[84, +)" unscaled="0.16019553456065128" scaled="31.0" />
+                    <weight var="avgMosInFile" binSpec="MV98" binLabel="ELSE" unscaled="0.0" scaled="26.0" />
+                    <weight var="mosSncMostRcnt30pDelq" binSpec="MV" binLabel="No Investigation (MV)" unscaled="0.0" scaled="27.0" />
+                    <weight var="mosSncMostRcnt30pDelq" binSpec="*e" binLabel="No record/no hit (MV18)" unscaled="-0.005152693616171806" scaled="26.0" />
+                    <weight var="mosSncMostRcnt30pDelq" binSpec="MV00" binLabel="No 30+ trade lines (MV00)" unscaled="0.25675822742409005" scaled="34.0" />
+                    <weight var="mosSncMostRcnt30pDelq" binSpec="MV01" binLabel="Undateable 30+ trade lines (MV01)" unscaled="0.0" scaled="27.0" />
+                    <weight var="mosSncMostRcnt30pDelq" binSpec="(-, 0), [0, 1)" binLabel="(-, 1)" unscaled="-0.21891920462253045" scaled="20.0" />
+                    <weight var="mosSncMostRcnt30pDelq" binSpec="[1, 2)" binLabel="[1, 2)" unscaled="-0.113805063449276" scaled="23.0" />
+                    <weight var="mosSncMostRcnt30pDelq" binSpec="[2, 3), [3, 6)" binLabel="[2, 6)" unscaled="0.06767738616452355" scaled="29.0" />
+                    <weight var="mosSncMostRcnt30pDelq" binSpec="[6, 9), [9, 12), [12, 18), [18, 24)" binLabel="[6, 24)" unscaled="0.1385982068801519" scaled="31.0" />
+                    <weight var="mosSncMostRcnt30pDelq" binSpec="[24, 30), [30, 36), [36, 42), [42, 48), [48, 54), [54, 60), [60, 66), [66, 72), [72, 78), [78, 84), [84, +)" binLabel="[24, +)" unscaled="0.2565739352082162" scaled="34.0" />
+                    <weight var="mosSncMostRcnt30pDelq" binSpec="MV98" binLabel="ELSE" unscaled="0.0" scaled="27.0" />
+                    <weight var="mosSncMostRcntInq" binSpec="MV" binLabel="No Investigation (MV)" unscaled="0.0" scaled="26.0" />
+                    <weight var="mosSncMostRcntInq" binSpec="MV18" binLabel="No record/no hit (MV18)" unscaled="-0.005152693616171806" scaled="26.0" />
+                    <weight var="mosSncMostRcntInq" binSpec="MV00" binLabel="No Inquiries (MV00)" unscaled="0.1878033880213153" scaled="32.0" />
+                    <weight var="mosSncMostRcntInq" binSpec="(-, 1)" binLabel="(-, 1)" unscaled="-0.20973534426608242" scaled="20.0" />
+                    <weight var="mosSncMostRcntInq" binSpec="[1, 2), [2, 3)" binLabel="[1, 3)" unscaled="-0.12242503268071758" scaled="23.0" />
+                    <weight var="mosSncMostRcntInq" binSpec="[3, 4), [4, 5), [5, 6)" binLabel="[3, 6)" unscaled="0.011600224713684302" scaled="27.0" />
+                    <weight var="mosSncMostRcntInq" binSpec="[6, 7), [7, 8), [8, 9), [9, 10), [10, 11), [11, 12)" binLabel="[6, 12)" unscaled="0.02482397836343278" scaled="27.0" />
+                    <weight var="mosSncMostRcntInq" binSpec="[12, 14), [14, 16), [16, 18), [18, 20), [20, 23), [23, +)" binLabel="[12, +)" unscaled="0.09804923245928243" scaled="29.0" />
+                    <weight var="mosSncMostRcntInq" binSpec="*e" binLabel="ELSE" unscaled="0.0" scaled="26.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="MV" binLabel="No Investigation (MV)" unscaled="0.0" scaled="26.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="MV18" binLabel="No record/no hit (MV18)" unscaled="-0.005152693616171804" scaled="26.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="MV00" binLabel="No trade lines opened 0-23 months (MV00)" unscaled="0.027293740091926623" scaled="27.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="MV01" binLabel="No open trade lines (MV01)" unscaled="0.0" scaled="26.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="MV02" binLabel="Total credti amount =0 (MV02)" unscaled="0.0" scaled="26.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="MV05" binLabel="No valid trade lines (MV05)" unscaled="0.0" scaled="26.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="(-, 0), [0, 50), [50, 55), [55, 56), [56, 60)" binLabel="(-, 60)" unscaled="0.31665089144537184" scaled="36.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="[60, 65), [65, 67), [67, 70)" binLabel="[60, 70)" unscaled="0.2789453164088428" scaled="34.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="[70, 73), [73, 75), [75, 78), [78, 80)" binLabel="[70, 80)" unscaled="0.12000839533316504" scaled="30.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="[80, 82), [82, 85), [85, 87), [87, 89), [89, 90)" binLabel="[80, 90)" unscaled="2.4366290781304675E-4" scaled="26.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="[90, 91), [91, 93), [93, 95), [95, 97), [97, 98), [98, 99), [99, 100)" binLabel="[90, 100)" unscaled="-0.06340753667397118" scaled="24.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="[100, 101)" binLabel="[100, 101)" unscaled="-0.14540558518871186" scaled="22.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="[101, 105), [105, 107), [107, 110)" binLabel="[101, 110)" unscaled="-0.14543710362846304" scaled="22.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="[110, 113), [113, 120), [120, 128), [128, 130), [130, 139), [139, 140), [140, 150)" binLabel="[110, 150)" unscaled="-0.14832009463820503" scaled="22.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="[150, 155), [155, 160), [160, 170), [170, 180), [180, 182), [182, 190), [190, 200), [200, 604), [604, +)" binLabel="[150, +)" unscaled="-0.20073942375076564" scaled="20.0" />
+                    <weight var="netFrctTLOpnd0To23Mos" binSpec="*e" binLabel="ELSE" unscaled="0.0" scaled="26.0" />
+                    <weight var="numILTL60pEverExclStudentLoan" binSpec="MV" binLabel="No Investigation (MV)" unscaled="0.0" scaled="27.0" />
+                    <weight var="numILTL60pEverExclStudentLoan" binSpec="MV18" binLabel="No record/no hit (MV18)" unscaled="-0.005152693616171803" scaled="27.0" />
+                    <weight var="numILTL60pEverExclStudentLoan" binSpec="MV00" binLabel="No valid installment trade lines (MV00)" unscaled="0.0" scaled="27.0" />
+                    <weight var="numILTL60pEverExclStudentLoan" binSpec="(-, 0), [0, 1)" binLabel="(-, 1)" unscaled="0.18863186244728572" scaled="33.0" />
+                    <weight var="numILTL60pEverExclStudentLoan" binSpec="[1, 2)" binLabel="[1, 2)" unscaled="0.03463028491407446" scaled="28.0" />
+                    <weight var="numILTL60pEverExclStudentLoan" binSpec="[2, 3)" binLabel="[2, 3)" unscaled="0.03423111296443032" scaled="28.0" />
+                    <weight var="numILTL60pEverExclStudentLoan" binSpec="[3, 4), [4, 5)" binLabel="[3, 5)" unscaled="-0.20540762143376895" scaled="21.0" />
+                    <weight var="numILTL60pEverExclStudentLoan" binSpec="[5, 6), [6, 7), [7, 8), [8, 9), [9, 10), [10, 12), [12, 15), [15, 33), [33, +)" binLabel="[5, +)" unscaled="-0.22943555904367294" scaled="20.0" />
+                    <weight var="numILTL60pEverExclStudentLoan" binSpec="*e" binLabel="ELSE" unscaled="0.0" scaled="27.0" />
+                    <weight var="numMtgTL30p0To11Mos" binSpec="MV" binLabel="No Investigation (MV)" unscaled="0.0" scaled="20.0" />
+                    <weight var="numMtgTL30p0To11Mos" binSpec="*e" binLabel="No record/no hit (MV18)" unscaled="-0.005152693616171804" scaled="20.0" />
+                    <weight var="numMtgTL30p0To11Mos" binSpec="MV00" binLabel="No mortgage trade lines (MV00)" unscaled="-0.04638575929012296" scaled="19.0" />
+                    <weight var="numMtgTL30p0To11Mos" binSpec="MV01" binLabel="No valid mortgage trade lines (MV01)" unscaled="0.0" scaled="20.0" />
+                    <weight var="numMtgTL30p0To11Mos" binSpec="[0, 1)" binLabel="[0, 1)" unscaled="1.177254543031467" scaled="56.0" />
+                    <weight var="numMtgTL30p0To11Mos" binSpec="[1, 2), [2, 3), [3, 4), [4, 5), [5, 6), [6, 7), [7, 8), [8, 9), [9, 10), [10, 11), [11, 12), [12, 13), [13, 14), [14, 15), [15, 16), [16, 17), [17, 18), [18, 19), [19, 20), [20, 21), [21, 22), [22, 23), [23, 24), [24, 25), [25, +)" binLabel="[1, +)" unscaled="-0.029643960819200354" scaled="20.0" />
+                    <weight var="numMtgTL30p0To11Mos" binSpec="MV98, (-, 0)" binLabel="ELSE" unscaled="0.0" scaled="20.0" />
+                    <weight var="IDEstado_new" binSpec="'A'" binLabel="A: Sureste" unscaled="-0.16871461339452082" scaled="19.0" />
+                    <weight var="IDEstado_new" binSpec="'I'" binLabel="I: Noreste" unscaled="-0.13451262666187444" scaled="20.0" />
+                    <weight var="IDEstado_new" binSpec="'F'" binLabel="F: Centro" unscaled="-0.05363379494733444" scaled="22.0" />
+                    <weight var="IDEstado_new" binSpec="'D'" binLabel="D: Sur" unscaled="-9.843375393214023E-4" scaled="24.0" />
+                    <weight var="IDEstado_new" binSpec="'G'" binLabel="G: Bajio" unscaled="-9.826849580158261E-4" scaled="24.0" />
+                    <weight var="IDEstado_new" binSpec="'H'" binLabel="H: Noroeste" unscaled="-9.731035219263974E-4" scaled="24.0" />
+                    <weight var="IDEstado_new" binSpec="'B'" binLabel="B: Golfo" unscaled="0.05113980116882114" scaled="26.0" />
+                    <weight var="IDEstado_new" binSpec="'E'" binLabel="E: Metropolitana" unscaled="0.08313195015701684" scaled="27.0" />
+                    <weight var="IDEstado_new" binSpec="'C'" binLabel="C: Occidente" unscaled="0.1376603010747326" scaled="28.0" />
+                    <weight var="IDEstado_new" binSpec="*e" binLabel="ELSE" unscaled="0.0" scaled="24.0" />
+                    <properties>
+                        <property name="unscaledIntercept" type="numeric" value="0.0" />
+                        <property name="intercept" type="numeric" value="0.0" />
+                    </properties>
+                </weights>
+                <allocatedPoints>
+                    <allocatedPoint var="gOcupacion" points="20.0" />
+                    <allocatedPoint var="gEdad" points="20.0" />
+                    <allocatedPoint var="avgMosInFile" points="20.0" />
+                    <allocatedPoint var="mosSncMostRcnt30pDelq" points="20.0" />
+                    <allocatedPoint var="mosSncMostRcntInq" points="20.0" />
+                    <allocatedPoint var="netFrctTLOpnd0To23Mos" points="20.0" />
+                    <allocatedPoint var="numILTL60pEverExclStudentLoan" points="20.0" />
+                    <allocatedPoint var="numMtgTL30p0To11Mos" points="19.0" />
+                    <allocatedPoint var="IDEstado_new" points="19.0" />
+                </allocatedPoints>
+            </ScaleInfo>
+        </Extension>
+    </Header>
+    <DataDictionary numberOfFields="10">
+        <DataField name="gOcupacion" displayName="gOcupacion" optype="categorical" dataType="string" />
+        <DataField name="gEdad" displayName="gEdad" optype="continuous" dataType="double" />
+        <DataField name="avgMosInFile" displayName="avgMosInFile" optype="continuous" dataType="double" />
+        <DataField name="mosSncMostRcnt30pDelq" displayName="mosSncMostRcnt30pDelq" optype="continuous" dataType="double" />
+        <DataField name="mosSncMostRcntInq" displayName="mosSncMostRcntInq" optype="continuous" dataType="double" />
+        <DataField name="netFrctTLOpnd0To23Mos" displayName="netFrctTLOpnd0To23Mos" optype="continuous" dataType="double" />
+        <DataField name="numILTL60pEverExclStudentLoan" displayName="numILTL60pEverExclStudentLoan" optype="continuous" dataType="double" />
+        <DataField name="numMtgTL30p0To11Mos" displayName="numMtgTL30p0To11Mos" optype="continuous" dataType="double" />
+        <DataField name="IDEstado_new" displayName="IDEstado_new" optype="categorical" dataType="string" />
+        <DataField name="Inf_target" displayName="Inf_target" optype="continuous" dataType="double" />
+    </DataDictionary>
+    <Scorecard modelName="AGB_Model" functionName="regression" algorithmName="rangeDivergence" useReasonCodes="false" initialScore="0.0" isScorable="true">
+        <MiningSchema>
+            <MiningField name="gOcupacion" optype="categorical" usageType="active" />
+            <MiningField name="gEdad" optype="continuous" usageType="active" />
+            <MiningField name="avgMosInFile" optype="continuous" usageType="active" missingValueReplacement="-9.90008E7" />
+            <MiningField name="mosSncMostRcnt30pDelq" optype="continuous" usageType="active" missingValueReplacement="-9.90008E7" />
+            <MiningField name="mosSncMostRcntInq" optype="continuous" usageType="active" missingValueReplacement="-9.90008E7" />
+            <MiningField name="netFrctTLOpnd0To23Mos" optype="continuous" usageType="active" missingValueReplacement="-9.90008E7" />
+            <MiningField name="numILTL60pEverExclStudentLoan" optype="continuous" usageType="active" missingValueReplacement="-9.90008E7" />
+            <MiningField name="numMtgTL30p0To11Mos" optype="continuous" usageType="active" missingValueReplacement="-9.90008E7" />
+            <MiningField name="IDEstado_new" optype="categorical" usageType="active" />
+            <MiningField name="Inf_target" optype="continuous" usageType="predicted" />
+        </MiningSchema>
+        <Output>
+            <OutputField name="Inf_target" targetField="Inf_target" feature="predictedValue" optype="continuous" dataType="double" />
+        </Output>
+        <ModelStats />
+        <LocalTransformations />
+        <Characteristics>
+            <Characteristic name="gOcupacion" baselineScore="28.0">
+                <Attribute partialScore="20.0">
+                    <SimpleSetPredicate field="gOcupacion" booleanOperator="isIn">
+                        <Array n="2" type="string">Mantenimiento Policias</Array>
+                    </SimpleSetPredicate>
+                </Attribute>
+                <Attribute partialScore="24.0">
+                    <SimpleSetPredicate field="gOcupacion" booleanOperator="isIn">
+                        <Array n="2" type="string">Administrativos Burocratas</Array>
+                    </SimpleSetPredicate>
+                </Attribute>
+                <Attribute partialScore="27.0">
+                    <SimplePredicate field="gOcupacion" operator="equal" value="Docentes" />
+                </Attribute>
+                <Attribute partialScore="35.0">
+                    <SimpleSetPredicate field="gOcupacion" booleanOperator="isIn">
+                        <Array n="5" type="string">"Empleado" "Empleado Sector Salud" "Empleados" "Enfermera" "Medicos"</Array>
+                    </SimpleSetPredicate>
+                </Attribute>
+                <Attribute partialScore="34.0">
+                    <SimplePredicate field="gOcupacion" operator="equal" value="Pensionado" />
+                </Attribute>
+                <Attribute partialScore="28.0">
+                    <SimplePredicate field="gOcupacion" operator="equal" value="Otro" />
+                </Attribute>
+                <Attribute partialScore="28.0">
+                    <True />
+                </Attribute>
+            </Characteristic>
+            <Characteristic name="gEdad" baselineScore="32.0">
+                <Attribute partialScore="20.0">
+                    <SimplePredicate field="gEdad" operator="lessThan" value="25.0" />
+                </Attribute>
+                <Attribute partialScore="28.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="gEdad" operator="greaterOrEqual" value="25.0" />
+                        <SimplePredicate field="gEdad" operator="lessThan" value="30.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="29.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="gEdad" operator="greaterOrEqual" value="30.0" />
+                        <SimplePredicate field="gEdad" operator="lessThan" value="35.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="32.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="gEdad" operator="greaterOrEqual" value="35.0" />
+                        <SimplePredicate field="gEdad" operator="lessThan" value="40.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="32.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="gEdad" operator="greaterOrEqual" value="40.0" />
+                        <SimplePredicate field="gEdad" operator="lessThan" value="45.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="32.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="gEdad" operator="greaterOrEqual" value="45.0" />
+                        <SimplePredicate field="gEdad" operator="lessThan" value="50.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="32.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="gEdad" operator="greaterOrEqual" value="50.0" />
+                        <SimplePredicate field="gEdad" operator="lessThan" value="55.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="36.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="gEdad" operator="greaterOrEqual" value="55.0" />
+                        <SimplePredicate field="gEdad" operator="lessThan" value="65.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="47.0">
+                    <SimplePredicate field="gEdad" operator="greaterOrEqual" value="65.0" />
+                </Attribute>
+                <Attribute partialScore="32.0">
+                    <True />
+                </Attribute>
+            </Characteristic>
+            <Characteristic name="avgMosInFile" baselineScore="26.0">
+                <Attribute partialScore="26.0">
+                    <SimplePredicate field="avgMosInFile" operator="equal" value="-99000800" />
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <True />
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <SimplePredicate field="avgMosInFile" operator="equal" value="-99000784" />
+                </Attribute>
+                <Attribute partialScore="20.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="avgMosInFile" operator="greaterThan" value="-9.9000784E7" />
+                        <SimplePredicate field="avgMosInFile" operator="lessThan" value="24.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="24.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="avgMosInFile" operator="greaterOrEqual" value="24.0" />
+                        <SimplePredicate field="avgMosInFile" operator="lessThan" value="36.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="avgMosInFile" operator="greaterOrEqual" value="36.0" />
+                        <SimplePredicate field="avgMosInFile" operator="lessThan" value="48.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="29.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="avgMosInFile" operator="greaterOrEqual" value="48.0" />
+                        <SimplePredicate field="avgMosInFile" operator="lessThan" value="60.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="30.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="avgMosInFile" operator="greaterOrEqual" value="60.0" />
+                        <SimplePredicate field="avgMosInFile" operator="lessThan" value="84.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="31.0">
+                    <SimplePredicate field="avgMosInFile" operator="greaterOrEqual" value="84.0" />
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <SimplePredicate field="avgMosInFile" operator="equal" value="-99000008" />
+                </Attribute>
+            </Characteristic>
+            <Characteristic name="mosSncMostRcnt30pDelq" baselineScore="27.0">
+                <Attribute partialScore="27.0">
+                    <SimplePredicate field="mosSncMostRcnt30pDelq" operator="equal" value="-99000800" />
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <True />
+                </Attribute>
+                <Attribute partialScore="34.0">
+                    <SimplePredicate field="mosSncMostRcnt30pDelq" operator="equal" value="-99000792" />
+                </Attribute>
+                <Attribute partialScore="27.0">
+                    <SimplePredicate field="mosSncMostRcnt30pDelq" operator="equal" value="-99000784" />
+                </Attribute>
+                <Attribute partialScore="20.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="mosSncMostRcnt30pDelq" operator="greaterThan" value="-9.9000784E7" />
+                        <SimplePredicate field="mosSncMostRcnt30pDelq" operator="lessThan" value="1.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="23.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="mosSncMostRcnt30pDelq" operator="greaterOrEqual" value="1.0" />
+                        <SimplePredicate field="mosSncMostRcnt30pDelq" operator="lessThan" value="2.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="29.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="mosSncMostRcnt30pDelq" operator="greaterOrEqual" value="2.0" />
+                        <SimplePredicate field="mosSncMostRcnt30pDelq" operator="lessThan" value="6.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="31.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="mosSncMostRcnt30pDelq" operator="greaterOrEqual" value="6.0" />
+                        <SimplePredicate field="mosSncMostRcnt30pDelq" operator="lessThan" value="24.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="34.0">
+                    <SimplePredicate field="mosSncMostRcnt30pDelq" operator="greaterOrEqual" value="24.0" />
+                </Attribute>
+                <Attribute partialScore="27.0">
+                    <SimplePredicate field="mosSncMostRcnt30pDelq" operator="equal" value="-99000008" />
+                </Attribute>
+            </Characteristic>
+            <Characteristic name="mosSncMostRcntInq" baselineScore="26.0">
+                <Attribute partialScore="26.0">
+                    <SimplePredicate field="mosSncMostRcntInq" operator="equal" value="-99000800" />
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <SimplePredicate field="mosSncMostRcntInq" operator="equal" value="-99000648" />
+                </Attribute>
+                <Attribute partialScore="32.0">
+                    <SimplePredicate field="mosSncMostRcntInq" operator="equal" value="-99000792" />
+                </Attribute>
+                <Attribute partialScore="20.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="mosSncMostRcntInq" operator="greaterThan" value="-9.9000792E7" />
+                        <SimplePredicate field="mosSncMostRcntInq" operator="lessThan" value="1.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="23.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="mosSncMostRcntInq" operator="greaterOrEqual" value="1.0" />
+                        <SimplePredicate field="mosSncMostRcntInq" operator="lessThan" value="3.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="27.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="mosSncMostRcntInq" operator="greaterOrEqual" value="3.0" />
+                        <SimplePredicate field="mosSncMostRcntInq" operator="lessThan" value="6.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="27.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="mosSncMostRcntInq" operator="greaterOrEqual" value="6.0" />
+                        <SimplePredicate field="mosSncMostRcntInq" operator="lessThan" value="12.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="29.0">
+                    <SimplePredicate field="mosSncMostRcntInq" operator="greaterOrEqual" value="12.0" />
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <True />
+                </Attribute>
+            </Characteristic>
+            <Characteristic name="netFrctTLOpnd0To23Mos" baselineScore="26.0">
+                <Attribute partialScore="26.0">
+                    <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="equal" value="-99000800" />
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="equal" value="-99000648" />
+                </Attribute>
+                <Attribute partialScore="27.0">
+                    <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="equal" value="-99000792" />
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="equal" value="-99000784" />
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="equal" value="-99000776" />
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="equal" value="-99000752" />
+                </Attribute>
+                <Attribute partialScore="36.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="greaterThan" value="-9.9000752E7" />
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="lessThan" value="60.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="34.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="greaterOrEqual" value="60.0" />
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="lessThan" value="70.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="30.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="greaterOrEqual" value="70.0" />
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="lessThan" value="80.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="greaterOrEqual" value="80.0" />
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="lessThan" value="90.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="24.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="greaterOrEqual" value="90.0" />
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="lessThan" value="100.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="22.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="greaterOrEqual" value="100.0" />
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="lessThan" value="101.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="22.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="greaterOrEqual" value="101.0" />
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="lessThan" value="110.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="22.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="greaterOrEqual" value="110.0" />
+                        <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="lessThan" value="150.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="20.0">
+                    <SimplePredicate field="netFrctTLOpnd0To23Mos" operator="greaterOrEqual" value="150.0" />
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <True />
+                </Attribute>
+            </Characteristic>
+            <Characteristic name="numILTL60pEverExclStudentLoan" baselineScore="27.0">
+                <Attribute partialScore="27.0">
+                    <SimplePredicate field="numILTL60pEverExclStudentLoan" operator="equal" value="-99000800" />
+                </Attribute>
+                <Attribute partialScore="27.0">
+                    <SimplePredicate field="numILTL60pEverExclStudentLoan" operator="equal" value="-99000648" />
+                </Attribute>
+                <Attribute partialScore="27.0">
+                    <SimplePredicate field="numILTL60pEverExclStudentLoan" operator="equal" value="-99000792" />
+                </Attribute>
+                <Attribute partialScore="33.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="numILTL60pEverExclStudentLoan" operator="greaterThan" value="-9.9000792E7" />
+                        <SimplePredicate field="numILTL60pEverExclStudentLoan" operator="lessThan" value="1.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="28.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="numILTL60pEverExclStudentLoan" operator="greaterOrEqual" value="1.0" />
+                        <SimplePredicate field="numILTL60pEverExclStudentLoan" operator="lessThan" value="2.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="28.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="numILTL60pEverExclStudentLoan" operator="greaterOrEqual" value="2.0" />
+                        <SimplePredicate field="numILTL60pEverExclStudentLoan" operator="lessThan" value="3.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="21.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="numILTL60pEverExclStudentLoan" operator="greaterOrEqual" value="3.0" />
+                        <SimplePredicate field="numILTL60pEverExclStudentLoan" operator="lessThan" value="5.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="20.0">
+                    <SimplePredicate field="numILTL60pEverExclStudentLoan" operator="greaterOrEqual" value="5.0" />
+                </Attribute>
+                <Attribute partialScore="27.0">
+                    <True />
+                </Attribute>
+            </Characteristic>
+            <Characteristic name="numMtgTL30p0To11Mos" baselineScore="20.0">
+                <Attribute partialScore="20.0">
+                    <SimplePredicate field="numMtgTL30p0To11Mos" operator="equal" value="-99000800" />
+                </Attribute>
+                <Attribute partialScore="20.0">
+                    <True />
+                </Attribute>
+                <Attribute partialScore="19.0">
+                    <SimplePredicate field="numMtgTL30p0To11Mos" operator="equal" value="-99000792" />
+                </Attribute>
+                <Attribute partialScore="20.0">
+                    <SimplePredicate field="numMtgTL30p0To11Mos" operator="equal" value="-99000784" />
+                </Attribute>
+                <Attribute partialScore="56.0">
+                    <CompoundPredicate booleanOperator="and">
+                        <SimplePredicate field="numMtgTL30p0To11Mos" operator="greaterOrEqual" value="0.0" />
+                        <SimplePredicate field="numMtgTL30p0To11Mos" operator="lessThan" value="1.0" />
+                    </CompoundPredicate>
+                </Attribute>
+                <Attribute partialScore="20.0">
+                    <SimplePredicate field="numMtgTL30p0To11Mos" operator="greaterOrEqual" value="1.0" />
+                </Attribute>
+                <Attribute partialScore="20.0">
+                    <CompoundPredicate booleanOperator="or">
+                        <SimplePredicate field="numMtgTL30p0To11Mos" operator="equal" value="-99000008" />
+                        <SimplePredicate field="numMtgTL30p0To11Mos" operator="lessThan" value="0.0" />
+                    </CompoundPredicate>
+                </Attribute>
+            </Characteristic>
+            <Characteristic name="IDEstado_new" baselineScore="24.0">
+                <Attribute partialScore="19.0">
+                    <SimplePredicate field="IDEstado_new" operator="equal" value="A" />
+                </Attribute>
+                <Attribute partialScore="20.0">
+                    <SimplePredicate field="IDEstado_new" operator="equal" value="I" />
+                </Attribute>
+                <Attribute partialScore="22.0">
+                    <SimplePredicate field="IDEstado_new" operator="equal" value="F" />
+                </Attribute>
+                <Attribute partialScore="24.0">
+                    <SimplePredicate field="IDEstado_new" operator="equal" value="D" />
+                </Attribute>
+                <Attribute partialScore="24.0">
+                    <SimplePredicate field="IDEstado_new" operator="equal" value="G" />
+                </Attribute>
+                <Attribute partialScore="24.0">
+                    <SimplePredicate field="IDEstado_new" operator="equal" value="H" />
+                </Attribute>
+                <Attribute partialScore="26.0">
+                    <SimplePredicate field="IDEstado_new" operator="equal" value="B" />
+                </Attribute>
+                <Attribute partialScore="27.0">
+                    <SimplePredicate field="IDEstado_new" operator="equal" value="E" />
+                </Attribute>
+                <Attribute partialScore="28.0">
+                    <SimplePredicate field="IDEstado_new" operator="equal" value="C" />
+                </Attribute>
+                <Attribute partialScore="24.0">
+                    <True />
+                </Attribute>
+            </Characteristic>
+        </Characteristics>
+    </Scorecard>
+</PMML>
+
